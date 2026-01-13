@@ -1,0 +1,109 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Wondr Coupon Animated
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <audio controls autoplay hidden>
+    <source src="https://cdn.glitch.global/7839e9bf-edcb-438d-9486-a90226aa4c1d/patok.mp3?v=1745086585783" type="audio/mpeg" />
+  </audio>      
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+   body {
+     font-family: 'Roboto Slab', serif;
+   }
+   /* Animation for fade in letter by letter */
+   .fade-in-text {
+     display: inline-block;
+     opacity: 0;
+     animation-fill-mode: forwards;
+     animation-name: fadeIn;
+     animation-duration: 0.04s;
+     animation-timing-function: ease-in;
+   }
+   @keyframes fadeIn {
+     to {
+       opacity: 1;
+     }
+   }
+  </style>
+  <script>
+   // Wrap each letter in span with fade-in-text class and stagger animation delay
+   function animateText(selector) {
+     const element = document.querySelector(selector);
+     if (!element) return;
+     const text = element.textContent;
+     element.textContent = '';
+     for (let i = 0; i < text.length; i++) {
+       const span = document.createElement('span');
+       span.textContent = text[i];
+       span.classList.add('fade-in-text');
+       span.style.animationDelay = (i * 0.04) + 's';
+       element.appendChild(span);
+     }
+   }
+   window.addEventListener('DOMContentLoaded', () => {
+     animateText('#topText');
+     animateText('#bottomText');
+   });
+  </script>
+ </head>
+ <body class="bg-white">
+  <div class="max-w-md mx-auto">
+   <!-- Top banner as image -->
+   <div>
+    <img alt="Wondr by BNI and BUMN Untuk Indonesia logos with orange curved corner top left" class="w-full object-contain" src="img/mennn.jpg"/>
+   </div>
+   <!-- Image of 5 people in yellow uniform -->
+   <div class="px-4">
+    <img alt="Five people standing in a row wearing yellow uniforms and white shirts with ties, smiling" class="w-full object-contain" height="675" src="img/1.png" width="380"/>
+   </div>
+   <!-- Blue text below image with fade in animation -->
+   <p class="text-center text-blue-700 font-semibold italic text-lg mt-2 px-4" id="topText">
+    Selamat Kupon Undian Suda Tercetak
+   </p>
+   <!-- Ticket style coupon -->
+   <div class="flex justify-center mt-4 px-4">
+    <div class="flex border border-slate-900 rounded-md overflow-hidden w-full max-w-xl">
+     <div class="bg-cyan-200 flex items-center justify-center px-6 relative">
+      <h2 class="text-orange-600 font-bold text-xl tracking-tight">
+       wondr
+      </h2>
+      <span class="text-xs font-semibold text-yellow-800 ml-1 mt-6">
+       by BNI
+      </span>
+      <div class="absolute top-0 left-0 w-6 h-6 bg-white rounded-full -translate-x-1/2 -translate-y-1/2 border border-slate-900">
+      </div>
+      <div class="absolute bottom-0 left-0 w-6 h-6 bg-white rounded-full -translate-x-1/2 translate-y-1/2 border border-slate-900">
+      </div>
+     </div>
+     <div class="bg-yellow-200 flex items-center px-4 flex-1">
+      <p class="font-extrabold text-2xl underline decoration-slate-900 decoration-2">
+       71600000********
+      </p>
+     </div>
+     <div class="relative">
+      <div class="absolute top-0 right-0 w-6 h-6 bg-white rounded-full translate-x-1/2 -translate-y-1/2 border border-slate-900">
+      </div>
+      <div class="absolute bottom-0 right-0 w-6 h-6 bg-white rounded-full translate-x-1/2 translate-y-1/2 border border-slate-900">
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- Instruction text with fade in animation -->
+   <div class="px-6 mt-6">
+    <p class="text-center text-slate-900 text-sm leading-relaxed font-semibold tracking-wide" id="bottomText">
+     Simpan  Kode  Kupon  Undian  Ssementara  Anda  Silahkan  Konfirmasi  Pendaftaran  Di  Aplikasi  Wondr  by  BNI  Anda  Sekarang  Pilih  MENU  Wondr  FESTIVAL,  Untuk  Mendaftar  Pihak  Bank  BNI  Akan  Menghubungi  Anda  Unutk  Konfirmasi  Pendaftaran  Kupon  Undian  Yang  Tercetak  Sementaera  Agar  Diganti  Ke  Kupon  Undian  Resmi  Di  Aplikasi  Wondr  By  Bni  Anda  Terimakasih.
+    </p>
+   </div>
+   <!-- Bottom banner as image -->
+   <div>
+    <img alt="Wondr by BNI and BUMN Untuk Indonesia logos with orange curved corner bottom right" class="w-full object-contain" src="img/xixixi.jpg"/>
+   </div>
+  </div>
+ </body>
+</html>
